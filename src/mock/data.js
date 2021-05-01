@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 export const data = [
   {
     id: nanoid(),
-    name: 'Yello Jacket Large',
+    name: 'Yellow Jacket Large',
     price: 50,
     image:
       'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',

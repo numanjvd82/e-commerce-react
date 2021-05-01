@@ -9,4 +9,45 @@
 .id,
 .color {
   margin: 0.5rem;
+  color: var(--secondary-text-color);
+}
+
+.title {
+  color: var(--text-color);
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  position: relative;
+}
+
+.product-total {
+  display: grid;
+  place-items: center;
+}
+
+.product-quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity {
+  font-size: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.btn-delete {
+  font-size: 1.2rem;
 }
