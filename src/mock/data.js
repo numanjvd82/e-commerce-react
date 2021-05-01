@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 
-[
+export const data = [
   {
     id: nanoid(),
     name: 'Yello Jacket Large',
