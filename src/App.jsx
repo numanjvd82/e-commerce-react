@@ -1,15 +1,12 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { printSome } from './actions/cartActions';
+import Products from './components/Products/Products';
 
 function App() {
-  const dispatch = useDispatch();
-
-  const printSomething = () => {
-    dispatch(printSome());
-  };
-
-  return <h1 onClick={printSomething}>React</h1>;
+  return (
+    <>
+      <Products />
+    </>
+  );
 }
 
 export default App;

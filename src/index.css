@@ -1,3 +1,9 @@
+:root {
+  --second-column-bg-color: #f9e7e4;
+  --secondary-text-color: #a2a09e;
+  --text-color: #0e0d0e;
+}
+
 *,
 ::after,
 ::before {

@@ -7,6 +7,7 @@ export const data = [
     price: 50,
     image: '../images/Jacket-1.jpg',
     amount: 2,
+    color: 'Yellow',
   },
   {
     id: nanoid(),
@@ -14,6 +15,7 @@ export const data = [
     price: 67,
     image: '../images/Jacket-2.jpg',
     amount: 1,
+    color: 'Brown',
   },
   {
     id: nanoid(),
@@ -21,6 +23,7 @@ export const data = [
     price: 35,
     image: '../images/Cap.jpg',
     amount: 4,
+    color: 'Blue',
   },
   {
     id: nanoid(),
@@ -28,5 +31,6 @@ export const data = [
     price: 800,
     image: '../images/iPhone.jpg',
     amount: 3,
+    color: 'White',
   },
 ];
