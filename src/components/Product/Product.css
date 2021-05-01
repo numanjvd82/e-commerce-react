@@ -1,0 +1,12 @@
+.img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  margin: 0.7rem;
+}
+
+.title,
+.id,
+.color {
+  margin: 0.5rem;
+}
