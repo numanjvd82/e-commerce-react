@@ -39,5 +39,13 @@ export const cartReducers = (state = initialState, action) => {
     return { ...state, product: tempCart };
   }
 
+  if (action.type === 'DELETE_PRODUCT') {
+    const tempCart = state.product.filter((item) => {
+      return item.id !== action.id;
+    });
+
+    return { ...state, product: tempCart };
+  }
+
   return state;
 };

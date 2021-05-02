@@ -9,3 +9,7 @@ export const decreaseQuantity = (id) => {
 export const productTotal = (id) => {
   return { type: 'SINGLE_PRODUCT_TOTAL', id };
 };
+
+export const deleteProduct = (id) => {
+  return { type: 'DELETE_PRODUCT', id };
+};

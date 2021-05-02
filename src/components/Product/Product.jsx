@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { IoRemoveCircleOutline } from 'react-icons/io5';
 import { IoIosAdd } from 'react-icons/io';
 import { IoMdRemove } from 'react-icons/io';
@@ -8,6 +7,7 @@ import {
   increaseQuantity,
   decreaseQuantity,
   productTotal,
+  deleteProduct,
 } from '../../actions/cartActions';
 import './Product.css';
 
@@ -22,6 +22,10 @@ const Product = ({ product }) => {
 
   const handleDecrease = () => {
     dispatch(decreaseQuantity(id));
+  };
+
+  const handleDelete = () => {
+    dispatch(deleteProduct(id));
   };
 
   useEffect(() => {
@@ -52,7 +56,7 @@ const Product = ({ product }) => {
         </div>
         <div className="product-total">
           <p>Total: ${total}</p>
-          <button className="btn btn-delete">
+          <button onClick={() => handleDelete()} className="btn btn-delete">
             <IoRemoveCircleOutline />
           </button>
         </div>

@@ -29,14 +29,21 @@
 }
 
 .product-total {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-quantity {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.product-price p:nth-child(1),
+.product-quantity p:nth-child(1),
+.product-total p:nth-child(1) {
+  font-weight: 500;
 }
 
 .quantity {
@@ -53,5 +60,10 @@
 }
 
 .btn-delete {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  background: rgb(20, 20, 20);
+  color: white;
+  border: 2px solid black;
+  display: grid;
+  border-radius: 10px;
 }
