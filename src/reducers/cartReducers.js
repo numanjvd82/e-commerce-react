@@ -8,9 +8,25 @@ const initialState = {
 
 export const cartReducers = (state = initialState, action) => {
   if (action.type === 'INCREASE_QUANTITY') {
-    console.log('increase');
-    const { amount } = product;
-    return { ...state, amount: amount + 1 };
+    const tempCart = state.product.map((item) => {
+      if (item.id === action.id) {
+        return { ...item, amount: item.amount + 1 };
+      }
+      return item;
+    });
+
+    return { ...state, product: tempCart };
+  }
+
+  if (action.type === 'DECREASE_QUANTITY') {
+    const tempCart = state.product.map((item) => {
+      if (item.id === action.id && item.amount > 1) {
+        return { ...item, amount: item.amount - 1 };
+      }
+      return item;
+    });
+
+    return { ...state, product: tempCart };
   }
 
   return state;

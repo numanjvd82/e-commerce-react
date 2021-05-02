@@ -14,11 +14,11 @@ const Product = ({ product }) => {
   const dispatch = useDispatch();
 
   const handleIncrease = () => {
-    dispatch(increaseQuantity());
+    dispatch(increaseQuantity(id));
   };
 
   const handleDecrease = () => {
-    dispatch(decreaseQuantity());
+    dispatch(decreaseQuantity(id));
   };
 
   return (
