@@ -5,3 +5,7 @@ export const increaseQuantity = (id) => {
 export const decreaseQuantity = (id) => {
   return { type: 'DECREASE_QUANTITY', id };
 };
+
+export const productTotal = (id) => {
+  return { type: 'SINGLE_PRODUCT_TOTAL', id };
+};

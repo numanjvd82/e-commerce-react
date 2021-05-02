@@ -9,6 +9,7 @@ export const data = [
       'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     amount: 2,
     color: 'Yellow',
+    total: 0,
   },
   {
     id: nanoid(),
@@ -18,6 +19,7 @@ export const data = [
       'https://images.pexels.com/photos/4992652/pexels-photo-4992652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     amount: 1,
     color: 'Brown',
+    total: 0,
   },
   {
     id: nanoid(),
@@ -27,6 +29,7 @@ export const data = [
       'https://images.pexels.com/photos/844867/pexels-photo-844867.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     amount: 4,
     color: 'Blue',
+    total: 0,
   },
   {
     id: nanoid(),
@@ -36,5 +39,6 @@ export const data = [
       'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
     amount: 3,
     color: 'White',
+    total: 0,
   },
 ];

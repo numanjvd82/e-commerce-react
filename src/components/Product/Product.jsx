@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { IoRemoveCircleOutline } from 'react-icons/io5';
 import { IoIosAdd } from 'react-icons/io';
 import { IoMdRemove } from 'react-icons/io';
 import { useDispatch } from 'react-redux';
-import { increaseQuantity, decreaseQuantity } from '../../actions/cartActions';
+import {
+  increaseQuantity,
+  decreaseQuantity,
+  productTotal,
+} from '../../actions/cartActions';
 import './Product.css';
 
 const Product = ({ product }) => {
-  const total = useSelector((state) => state.productTotal);
-  const { id, name, color, image, price, amount } = product;
+  const { id, name, color, image, price, amount, total } = product;
 
   const dispatch = useDispatch();
 
@@ -20,6 +23,10 @@ const Product = ({ product }) => {
   const handleDecrease = () => {
     dispatch(decreaseQuantity(id));
   };
+
+  useEffect(() => {
+    dispatch(productTotal(id));
+  }, [amount]);
 
   return (
     <>
@@ -44,7 +51,7 @@ const Product = ({ product }) => {
           </button>
         </div>
         <div className="product-total">
-          Total: ${total}
+          <p>Total: ${total}</p>
           <button className="btn btn-delete">
             <IoRemoveCircleOutline />
           </button>

@@ -24,6 +24,10 @@
   position: relative;
 }
 
+.product-container > .product-information {
+  margin: 0 1rem 0 0;
+}
+
 .product-total {
   display: grid;
   place-items: center;

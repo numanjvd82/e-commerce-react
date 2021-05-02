@@ -25,6 +25,16 @@ export const cartReducers = (state = initialState, action) => {
       }
       return item;
     });
+    return { ...state, product: tempCart };
+  }
+
+  if (action.type === 'SINGLE_PRODUCT_TOTAL') {
+    const tempCart = state.product.map((item) => {
+      if (item.id === action.id) {
+        return { ...item, total: item.price * item.amount };
+      }
+      return item;
+    });
 
     return { ...state, product: tempCart };
   }
