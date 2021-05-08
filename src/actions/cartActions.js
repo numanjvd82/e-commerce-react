@@ -13,3 +13,7 @@ export const productTotal = (id) => {
 export const deleteProduct = (id) => {
   return { type: 'DELETE_PRODUCT', id };
 };
+
+export const totalProductCost = () => {
+  return { type: 'TOTAL_PRODUCT_COST' };
+};

@@ -6,9 +6,14 @@ function App() {
   const cartState = useSelector((state) => state.product);
   if (cartState.length === 0) {
     return (
-      <h1 style={{ margin: '1rem 0', textAlign: `center` }}>
-        No items in the Cart
-      </h1>
+      <>
+        <h1 style={{ margin: '1rem 0', textAlign: `center` }}>
+          No items in the Cart
+        </h1>
+        <div>
+          <button className="btn btn-success">Display Items</button>
+        </div>
+      </>
     );
   }
   return (

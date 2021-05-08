@@ -2,16 +2,18 @@ import React, { useEffect } from 'react';
 import { IoRemoveCircleOutline } from 'react-icons/io5';
 import { IoIosAdd } from 'react-icons/io';
 import { IoMdRemove } from 'react-icons/io';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   increaseQuantity,
   decreaseQuantity,
   productTotal,
   deleteProduct,
+  totalProductCost,
 } from '../../actions/cartActions';
 import './Product.css';
 
 const Product = ({ product }) => {
+  const cartProduct = useSelector((state) => state.product);
   const { id, name, color, image, price, amount, total } = product;
 
   const dispatch = useDispatch();
@@ -31,6 +33,10 @@ const Product = ({ product }) => {
   useEffect(() => {
     dispatch(productTotal(id));
   }, [amount]);
+
+  useEffect(() => {
+    dispatch(totalProductCost());
+  }, [cartProduct]);
 
   return (
     <>

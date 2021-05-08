@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const Products = () => {
   const productData = useSelector((state) => state.product);
-  const total = useSelector((state) => state.total);
+  const total = useSelector((state) => state.productTotal);
 
   return (
     <>

@@ -2,7 +2,6 @@ import { data } from '../mock/data';
 
 const initialState = {
   product: data,
-  total: 0,
   productTotal: 0,
 };
 
@@ -45,6 +44,14 @@ export const cartReducers = (state = initialState, action) => {
     });
 
     return { ...state, product: tempCart };
+  }
+
+  if (action.type === 'TOTAL_PRODUCT_COST') {
+    const tempCart = state.product.reduce((cartVal, item) => {
+      return cartVal + item.total;
+    }, 0);
+
+    return { ...state, productTotal: tempCart };
   }
 
   return state;

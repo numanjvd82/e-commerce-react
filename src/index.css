@@ -24,3 +24,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.button {
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
