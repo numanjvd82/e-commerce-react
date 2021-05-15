@@ -54,5 +54,10 @@ export const cartReducers = (state = initialState, action) => {
     return { ...state, productTotal: tempCart };
   }
 
+  if (action.type === 'CLEAR_ALL_CART') {
+    return { ...state, product: [] };
+    // console.log('clear all');
+  }
+
   return state;
 };

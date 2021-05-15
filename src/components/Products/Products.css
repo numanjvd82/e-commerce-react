@@ -1,4 +1,37 @@
+.products-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.underline {
+  width: 100vw;
+  height: 3px;
+  background: black;
+}
+
+.btn-clear {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.btn-clear:hover {
+  background: rgb(184, 183, 183);
+  color: black;
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 4rem rgba(black, 0.3);
+}
+
 .products-total {
-  border-top: 3px solid black;
-  margin: 1rem 0;
+  /* border-top: 3px solid black; */
+  margin: 1rem auto;
+  text-align: center;
+  display: inline-block;
 }

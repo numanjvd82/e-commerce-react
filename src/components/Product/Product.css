@@ -24,8 +24,22 @@
   position: relative;
 }
 
-.product-container > .product-information {
+@media (max-width: 414px) {
+  .product-container:nth-child(2) .product-information {
+    flex: 0 0 65%;
+  }
+}
+
+.product-information {
+  flex: 0 0 40%;
+}
+
+.product-container > div:not(:last-child) {
   margin: 0 1rem 0 0;
+}
+
+.product-container > div:not(:first-child) {
+  flex: 0 0 20%;
 }
 
 .product-total {

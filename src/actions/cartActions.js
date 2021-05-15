@@ -17,3 +17,7 @@ export const deleteProduct = (id) => {
 export const totalProductCost = () => {
   return { type: 'TOTAL_PRODUCT_COST' };
 };
+
+export const clearCart = () => {
+  return { type: 'CLEAR_ALL_CART' };
+};

@@ -18,6 +18,7 @@ body {
   font-size: 16px;
   background-color: hsl(0, 26%, 95%);
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 code {
@@ -25,8 +26,20 @@ code {
     monospace;
 }
 
-.button {
+.btn {
   display: inline-block;
-  text-align: center;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.btn-delete {
+  font-size: 1.5rem;
+  background: rgb(20, 20, 20);
   color: white;
+  border: 2px solid black;
+  display: grid;
+  border-radius: 10px;
 }
